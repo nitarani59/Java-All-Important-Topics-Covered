@@ -7,23 +7,6 @@ import static org.junit.Assert.*;
 public class OptionalClassHandsOn {
 
     public static void main(String[] args) {
-        OptionalClassHandsOn optionalClassHandsOn = new OptionalClassHandsOn();
-        optionalClassHandsOn.givenNonNull_whenCreatesNonNullable_thenCorrect();
-        optionalClassHandsOn.givenNonNull_whenCreatesNullable_thenCorrect();
-        optionalClassHandsOn.givenOptional_whenIsPresentWorks_thenCorrect();
-        optionalClassHandsOn.whenOrElseWorks_thenCorrect();
-        optionalClassHandsOn.whenOrElseGetWorks_thenCorrect();
-        optionalClassHandsOn.whenOrElseThrowWorks_thenCorrect();
-//        optionalClassHandsOn.whenIfPresentOrElseWorks_thenCorrect();
-//        optionalClassHandsOn.whenIfPresentOrElseGetWorks_thenCorrect();
-//        optionalClassHandsOn.whenIfPresentOrElseThrowWorks_thenCorrect();
-//        optionalClassHandsOn.whenIfPresentWorks_thenCorrect();
-//        optionalClassHandsOn.whenIfPresentGetWorks_thenCorrect();
-//        optionalClassHandsOn.whenIfPresentThrowWorks_thenCorrect();
-//        optionalClassHandsOn.whenIfPresentOrElseGetWorks_thenCorrect();
-//        optionalClassHandsOn.whenIfPresentOrElseThrowWorks_thenCorrect();
-//        optionalClassHandsOn.whenIfPresentOrElseGetWorks_thenCorrect();
-        optionalClassHandsOn.whenCreatesEmptyOptional_thenCorrect();
     }
 
     @Test
