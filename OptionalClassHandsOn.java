@@ -1,25 +1,35 @@
 import org.junit.Test;
 
-import java.util.NoSuchElementException;
-import java.util.Optional;
-import java.util.Scanner;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
 public class OptionalClassHandsOn {
 
     public static void main(String[] args) {
-//        OptionalClassHandsOn opt = new OptionalClassHandsOn();
-//        opt.whenCreatesEmptyOptional_thenCorrect();
-//        opt.givenNonNull_whenCreatesNonNullable_thenCorrect();
-//        opt.givenNonNull_whenCreatesNullable_thenCorrect();
-//        opt.givenOptional_whenIfPresentWorks_thenCorrect();
+        OptionalClassHandsOn optionalClassHandsOn = new OptionalClassHandsOn();
+        optionalClassHandsOn.givenNonNull_whenCreatesNonNullable_thenCorrect();
+        optionalClassHandsOn.givenNonNull_whenCreatesNullable_thenCorrect();
+        optionalClassHandsOn.givenOptional_whenIsPresentWorks_thenCorrect();
+        optionalClassHandsOn.whenOrElseWorks_thenCorrect();
+        optionalClassHandsOn.whenOrElseGetWorks_thenCorrect();
+        optionalClassHandsOn.whenOrElseThrowWorks_thenCorrect();
+//        optionalClassHandsOn.whenIfPresentOrElseWorks_thenCorrect();
+//        optionalClassHandsOn.whenIfPresentOrElseGetWorks_thenCorrect();
+//        optionalClassHandsOn.whenIfPresentOrElseThrowWorks_thenCorrect();
+//        optionalClassHandsOn.whenIfPresentWorks_thenCorrect();
+//        optionalClassHandsOn.whenIfPresentGetWorks_thenCorrect();
+//        optionalClassHandsOn.whenIfPresentThrowWorks_thenCorrect();
+//        optionalClassHandsOn.whenIfPresentOrElseGetWorks_thenCorrect();
+//        optionalClassHandsOn.whenIfPresentOrElseThrowWorks_thenCorrect();
+//        optionalClassHandsOn.whenIfPresentOrElseGetWorks_thenCorrect();
+        optionalClassHandsOn.whenCreatesEmptyOptional_thenCorrect();
     }
 
     @Test
     public void whenCreatesEmptyOptional_thenCorrect() {
         Optional<String> empty = Optional.empty();
-        assertFalse(empty.isPresent());
+        assertTrue(empty.isEmpty());
     }
 
     @Test
@@ -152,5 +162,17 @@ public class OptionalClassHandsOn {
         assertTrue(is2016);
         boolean is2017 = yearOptional.filter(y -> y == 2017).isPresent();
         assertFalse(is2017);
+    }
+
+    @Test
+    public void givenOptional_whenMapWorks_thenCorrect() {
+        List<String> companyNames = Arrays.asList(
+                "paypal", "oracle", "", "microsoft", "", "apple");
+        Optional<List<String>> listOptional = Optional.of(companyNames);
+
+        int size = listOptional
+                .map(List::size)
+                .orElse(0);
+        assertEquals(6, size);
     }
 }
