@@ -168,3 +168,20 @@ There are several implementations of the Map interface in Java, each with its ow
 #### Pending 
     Collect, Parallel Stream
 
+
+### Serialization
+    - The JVM associates a version (long) number with each serializable class. We use it to verify that the saved and loaded objects have the same attributes, and thus are compatible on serialization.
+    - Most IDEs can generate this number automatically, and it’s based on the class name, attributes, and associated access modifiers. Any changes result in a different number, and can cause an InvalidClassException.
+
+    - Note that static fields belong to a class (as opposed to an object) and are not serialized.
+    - The JVM associates a version (long) number with each serializable class. We use it to verify that the saved and loaded objects have the same attributes, and thus are compatible on serialization.
+    - Most IDEs can generate this number automatically, and it’s based on the class name, attributes, and associated access modifiers. Any changes result in a different number, and can cause an InvalidClassException.
+
+### Try-With-Resources
+    - introduced in Java 7 — allows us to declare resources to be used in a try block with the assurance that the resources will be closed after the execution of that block.
+    - The resources declared need to implement the AutoCloseable interface.
+    - We can declare multiple resources just fine in a try-with-resources block by separating them with a semicolon:
+    - To construct a custom resource that will be correctly handled by a try-with-resources block, the class should implement the Closeable or AutoCloseable interfaces and override the close method:
+    - Resources that were defined/acquired first will be closed last. 
+    - A try-with-resources block can still have the catch and finally blocks, which will work in the same way as with a traditional try block.
+    - As of Java 9 and as part of JEP 213, we can now use final or even effectively final variables inside a try-with-resources block:
