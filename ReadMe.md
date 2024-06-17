@@ -189,3 +189,6 @@ There are several implementations of the Map interface in Java, each with its ow
 ### Reflection
     -  forName() is used to obtain the Class object for a class given its fully qualified name (including package).
     -  getSimpleName() is used to retrieve the simple (unqualified) name of a class.
+
+### MultiThreading
+    - Synchronized, reentrant lock, ReadWrite Lock, StampLock, Semaphore
