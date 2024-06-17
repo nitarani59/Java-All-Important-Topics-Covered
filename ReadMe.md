@@ -185,3 +185,7 @@ There are several implementations of the Map interface in Java, each with its ow
     - Resources that were defined/acquired first will be closed last. 
     - A try-with-resources block can still have the catch and finally blocks, which will work in the same way as with a traditional try block.
     - As of Java 9 and as part of JEP 213, we can now use final or even effectively final variables inside a try-with-resources block:
+
+### Reflection
+    -  forName() is used to obtain the Class object for a class given its fully qualified name (including package).
+    -  getSimpleName() is used to retrieve the simple (unqualified) name of a class.
