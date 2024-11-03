@@ -1,4 +1,4 @@
-package MultiThreading.lock.readwriteLock;
+package lock.readwriteLock;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
