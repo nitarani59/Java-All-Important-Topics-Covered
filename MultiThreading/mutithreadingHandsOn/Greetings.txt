@@ -1,0 +1,4 @@
+GoodMorning
+GoodNight
+GoodAfternoon
+Welcome
