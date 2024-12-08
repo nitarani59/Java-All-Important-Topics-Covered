@@ -1,4 +1,4 @@
-package mutithreadingHandsOn;
+package multithreadingHandsOn;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

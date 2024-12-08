@@ -1,4 +1,4 @@
-package mutithreadingHandsOn;
+package multithreadingHandsOn;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
